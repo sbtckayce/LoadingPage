@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.loading-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+
+}
+.loading-main div{
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    margin: 10px;
+    animation: loading 0.5s infinite linear alternate;
+    animation-delay: calc(1*(1/5)*var(--delay));
+}
+@keyframes loading{
+    0%{
+        transform: translateY(0);
+    }
+    50%,100%{
+        transform: translateY(20px);
+    }
+}
+/* .loading-main div:nth-child(1){
+    animation-delay: -0.1s;
+}
+.loading-main div:nth-child(2){
+  animation-delay: -0.3s;
+    
+}.loading-main div:nth-child(3){
+    animation-delay: -0.5s;
+}.loading-main div:nth-child(4){
+    animation-delay: -0.7s;} */
